@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Load React -->
+    <!--first library is react library by itself-->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <!--second library is react for the browser-->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <!--third library is for babel, which will compile our "modern" to something any browser could understand-->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <title>ReactApp Basic Example</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- CDN react libraries could also be placed here-->
+    <script type="text/babel">
+
+        // reference to the root div
+        const divRoot=document.querySelector("#root");
+        const nombre="FRAN";
+
+        const h1Tag=<h1>HELLO WORLD, I AM {nombre}</h1>;
+
+        //this object comes on the 2nd library, the one who says "DOM"
+        //first parameter, element to render
+        //second, element where 1st parameter will be rendered
+        ReactDOM.render(h1Tag,divRoot);
+
+    </script>
+</body>
+</html>
